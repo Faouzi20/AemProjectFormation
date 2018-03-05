@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>aemprojectone - UI content</comment>
+<entry key="createdBy">user</entry>
+<entry key="name">aemprojectone.ui.content</entry>
+<entry key="created">2018-03-05T14:13:22.395+0000</entry>
+<entry key="groupId">com.aemprojectone</entry>
+<entry key="version">0.0.1-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">aemprojectone Content Package</entry>
+<entry key="description">UI content package for aemprojectone</entry>
+<entry key="artifactId">aemprojectone.ui.content</entry>
+<entry key="path">/etc/packages/aemprojectone Content Package/aemprojectone.ui.content.zip</entry>
+</properties>
