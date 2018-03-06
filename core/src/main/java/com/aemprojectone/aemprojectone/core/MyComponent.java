@@ -1,7 +1,5 @@
 package com.aemprojectone.aemprojectone.core;
 
-
-
 import javax.jcr.Node;
 import javax.jcr.PathNotFoundException;
 import javax.jcr.RepositoryException;
@@ -25,24 +23,25 @@ public class MyComponent extends WCMUsePojo {
 	private ResourceResolver resourceResolver;
 
 	@Override
-	public void activate() {//throws ValueFormatException, PathNotFoundException, RepositoryException {
+	public void activate() {
 		myTitle = "My Project " + getCurrentPage().getTitle();
 		text =  (String) getProperties().get("text", "toto");
 		pathTitle = getProperties().get("pathbrowser", "test");
 		typeText = getProperties().get("type", "size");
 		pathbrowser = getProperties().get("pathbrowser", "size");
+		
+		Resource pageResource = getResourceResolver().getResource(pathbrowser);
+		//titleComp = pageResource.getName();
+		titleComp = pageResource.getValueMap().get("jcr:title", String.class);		
 		/*ResourceResolver resourceResolver = getResourceResolver();
 	    Resource res = resourceResolver.getResource(pathbrowser);
 		Node node = resourceResolver.adaptTo(Node.class);*/
-		
-		Resource pageResource = getResourceResolver().getResource(pathbrowser);
-		titleComp = pageResource.getName();
 		//Node node = pageResource.adaptTo(Node.class);
 		//Node node = pageResource.adaptTo(Node.class);
 		//titleComp = node.getPath();
 		//titleComp = resourceResolver.getResource(pathbrowser).getName();
-//		Node node = resourceResolver.getResource(pathbrowser).adaptTo(Node.class);
-	//	titleComp = node.hasProperty("title") ? node.getProperty("title").getString() : "default title";
+		//Node node = resourceResolver.getResource(pathbrowser).adaptTo(Node.class);
+		//titleComp = node.hasProperty("title") ? node.getProperty("title").getString() : "default title";
 		//titleComp = "Default";
 	}
 	
