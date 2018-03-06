@@ -4,11 +4,11 @@
     title="Properties"
     xtype="panel">
     <items jcr:primaryType="cq:WidgetCollection">
-        <text
+        <select
             jcr:primaryType="cq:Widget"
-            fieldLabel="Text"
-            name="./text"
-            xtype="textfield"/>
+            fieldLabel="pathbrowser"
+            name="./pathbrowser"
+            xtype="pathbrowser"/>
     </items>
 </jcr:root>
  

@@ -18,7 +18,38 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/textfield"
                         fieldLabel="Text"
-                        name="./text"/>
+                        name="./text"
+                    />
+                    <type
+					    jcr:primaryType="nt:unstructured"
+					    sling:resourceType="granite/ui/components/foundation/form/select"
+					    fieldLabel="Type"
+					    name="./type"
+					 	required="{Boolean}true">
+    					<items jcr:primaryType="nt:unstructured">
+					        <select
+					            jcr:primaryType="nt:unstructured"
+					            key="Default"					
+					            					
+					            text="Default"
+					            value=""/>
+					        <detail
+					            jcr:primaryType="nt:unstructured"
+					            key="h1"					
+					            text="H1"					
+					            value="h1"/>
+					        <landing
+					            jcr:primaryType="nt:unstructured"				
+					            key="h2"					
+					            text="H2"	
+					            value="h2"/>		
+					         <landing2
+					            jcr:primaryType="nt:unstructured"				
+					            key="h3"					
+					            text="H3"	
+					            value="h3"/>		
+					    </items>
+					</type>       
                 </items>
             </column>
         </items>
