@@ -16,11 +16,12 @@ import com.adobe.cq.social.calendar.client.api.Page;
 public class MyComponent extends WCMUsePojo {
 	private String myTitle;
 	private String text;
+	private String textfield;
 	private String pathTitle;
 	private String typeText;
 	private String pathbrowser;
 	private String titleComp;
-	private ResourceResolver resourceResolver;
+	private String color;
 
 	@Override
 	public void activate() {
@@ -29,20 +30,12 @@ public class MyComponent extends WCMUsePojo {
 		pathTitle = getProperties().get("pathbrowser", "test");
 		typeText = getProperties().get("type", "size");
 		pathbrowser = getProperties().get("pathbrowser", "size");
+		textfield =  (String) getProperties().get("textcolor", "default text");
+		color =  (String) getProperties().get("color", "black");
 		
 		Resource pageResource = getResourceResolver().getResource(pathbrowser);
-		//titleComp = pageResource.getName();
 		titleComp = pageResource.getValueMap().get("jcr:title", String.class);		
-		/*ResourceResolver resourceResolver = getResourceResolver();
-	    Resource res = resourceResolver.getResource(pathbrowser);
-		Node node = resourceResolver.adaptTo(Node.class);*/
-		//Node node = pageResource.adaptTo(Node.class);
-		//Node node = pageResource.adaptTo(Node.class);
-		//titleComp = node.getPath();
-		//titleComp = resourceResolver.getResource(pathbrowser).getName();
-		//Node node = resourceResolver.getResource(pathbrowser).adaptTo(Node.class);
-		//titleComp = node.hasProperty("title") ? node.getProperty("title").getString() : "default title";
-		//titleComp = "Default";
+
 	}
 	
 	public String getMyTitle() {
@@ -68,5 +61,14 @@ public class MyComponent extends WCMUsePojo {
 	public String getTitleComp() {
 		return titleComp;
 	}
+
+	public String getTextfield() {
+		return textfield;
+	}
+
+	public String getColor() {
+		return color;
+	}
+	
 	
 }

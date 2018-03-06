@@ -29,8 +29,7 @@
     					<items jcr:primaryType="nt:unstructured">
 					        <select
 					            jcr:primaryType="nt:unstructured"
-					            key="Default"					
-					            					
+					            key="Default"									
 					            text="Default"
 					            value=""/>
 					        <detail
