@@ -18,11 +18,18 @@
         <div class="page__logo" data-sly-resource="logo"></div>
         <nav class="page__topnav" data-sly-resource="topnav"></nav>
     </header>
-	<div>
-		<ul data-sly-list.child="${currentPage.listChildren}">
-		 	<li>${child.title}</li>
-		</ul>
-	</div>
+    
+	
+		<div data-sly-use.comp="${'com.aemprojectone.aemprojectone.core.BreadCrumb' @ thisPage = currentPage.path}">
+				
+				<sly data-sly-list.parents="${comp.parentList}" >
+					<p><a href="${parents.path}.html" data-sly-unwrap="${currentPage.name == parents.name}">${parents.name}</a> </p>
+				</sly>
+				<br>
+				<p><a href="${comp.childrenPage.path}.html">${comp.childrenPage.name}</a> </p>
+    
+		</div>
+	
     <div class="page__title" data-sly-resource="${'title' @ decorationTagName='div'}"></div>
     <div class="page__par" data-sly-resource="par"></div>
 	

@@ -506,6 +506,13 @@
                <version>1.0</version>
                <scope>provided</scope>
            </dependency>
+           <dependency>
+			    <groupId>org.apache.sling</groupId>
+			    <artifactId>org.apache.sling.scripting.sightly</artifactId>
+			    <version>1.0.46</version>
+			    <scope>provided</scope>
+			</dependency>
+           
         </dependencies>
     </dependencyManagement>
 
