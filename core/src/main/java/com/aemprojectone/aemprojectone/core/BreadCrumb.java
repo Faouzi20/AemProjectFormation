@@ -15,7 +15,7 @@ public class BreadCrumb extends WCMUsePojo{
 	private String pageProperty;
 	private List<Page> parentList;
 	private Page childrenPage;
-	
+	 
 	
 	@Override
 	public void activate() throws Exception {

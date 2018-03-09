@@ -14,7 +14,11 @@
     limitations under the License.
 */-->
 <meta charset="utf-8" data-sly-use.head="head.js">
-<title>${currentPage.title || currentPage.name}</title>
+	<title>${currentPage.title || currentPage.name}</title>
+    <cq:include script="/libs/wcm/mobile/components/simulator/simulator.jsp"/>
 <meta name="keywords" content="${head.keywords}"/>
 <meta name="description" content="${properties.jcr:description}"/>
+
+<meta data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.all @ categories='TrainingClientLib.edit'}" data-sly-unwrap />
+
 <link data-sly-test="${head.favIcon}" rel="icon" href="${head.favIcon}"/>
